@@ -12,14 +12,36 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//const mysql = require('mysql');
+
+const connection = mysql.createConnection({
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT || 3306,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+});
+
+connection.connect((err) => {
+  if (err) {
+    console.error('DB connection failed:', err.stack);
+    return;
+  }
+  console.log('✅ Connected to Railway MySQL');
+    createTables();
+});
+
+module.exports = connection;
+
+
 // Database connection
-const db = mysql.createConnection({
+/*const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',      // Change to your MySQL username
     password: '6362',      // Change to your MySQL password
     database: 'budget_tracker'
 });
-
+*/
 db.connect((err) => {
     if (err) {
         console.error('Database connection failed:', err);
