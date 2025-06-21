@@ -14,6 +14,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Database connection using Railway environment variables
 
+console.log('🔍 Database connection details:');
+console.log('Host:', process.env.MYSQL_HOST);
+console.log('Port:', process.env.MYSQL_PORT);
+console.log('User:', process.env.MYSQL_USER);
+console.log('Database:', process.env.MYSQL_DATABASE);
+console.log('Password exists:', !!process.env.MYSQL_PASSWORD);
 
 const connection = mysql.createConnection({
   host: process.env.MYSQL_HOST,
