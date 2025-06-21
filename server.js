@@ -41,7 +41,7 @@ module.exports = connection;
     password: '6362',      // Change to your MySQL password
     database: 'budget_tracker'
 });
-*/
+
 db.connect((err) => {
     if (err) {
         console.error('Database connection failed:', err);
@@ -52,7 +52,7 @@ db.connect((err) => {
     // Create tables if they don't exist
     createTables();
 });
-
+*/
 // Create necessary tables
 function createTables() {
     // Create users table
