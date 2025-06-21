@@ -14,14 +14,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Database connection using Railway environment variables
 
-const connection = mysql.createConnection({
-  host: process.env.DATABASE_HOST,
-  port: process.env.DATABASE_PORT || 3306,
-  user: process.env.DATABASE_USER,
-  password: process.env.DATABASE_PASSWORD,
-  database: process.env.DATABASE_NAME
-});
 
+const connection = mysql.createConnection({
+  host: process.env.MYSQL_HOST || process.env.DATABASE_HOST,
+  port: process.env.MYSQL_PORT || process.env.DATABASE_PORT || 3306,
+  user: process.env.MYSQL_USER || process.env.DATABASE_USER,
+  password: process.env.MYSQL_PASSWORD || process.env.DATABASE_PASSWORD,
+  database: process.env.MYSQL_DATABASE || process.env.DATABASE_NAME
+});
 connection.connect((err) => {
   if (err) {
     console.error('❌ DB connection failed:', err.stack);
