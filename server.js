@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Database connection using Railway environment variables
-const mysql = require('mysql2');
+
 const connection = mysql.createConnection({
   host: process.env.DATABASE_HOST,
   port: process.env.DATABASE_PORT || 3306,
