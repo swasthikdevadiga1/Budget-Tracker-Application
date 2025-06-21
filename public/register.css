@@ -1,0 +1,43 @@
+
+body {
+    background: linear-gradient(135deg, #e455d8, #dbda87); /* Smooth gradient background */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #160202; /* White text for better contrast */
+}
+.horizontal-form {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.horizontal-form .form-control {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent input background */
+    border: none;
+    color: #e41313; /* White text */
+}
+.horizontal-form .form-control::placeholder {
+    color: rgba(124, 14, 14, 0.7); /* Placeholder text color */
+}
+.horizontal-form .btn-primary {
+    background-color: #2575fc;
+    border: none;
+    width: 100%;
+}
+.horizontal-form .btn-primary:hover {
+    background-color: #1a5bbf;
+}
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+.register-link a {
+    color: #2575fc;
+    text-decoration: none;
+}
+.register-link a:hover {
+    text-decoration: underline;
+}

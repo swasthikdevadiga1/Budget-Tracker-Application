@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    background-color: #020813;
+    overflow: hidden;
+    height: 50px; /* Set a fixed height for the navbar */
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .navbar li {
+    padding: 0 15px; /* Reduced padding */
+    line-height: 50px; /* Align text vertically */
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #e8edf3;
+    font-size: 16px;
+  }
+
+  .navbar a:hover {
+    text-decoration: underline;
+    color:red;
+  }
+  .navbar li + li {
+    margin-left: 400px; /* Adds space between consecutive list items */
+  }
