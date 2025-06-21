@@ -1,7 +1,7 @@
 # Budget Tracker Application
 
 #Live Demo 
-https://budget-tracker-application-production.up.railway.app/dashboard.html
+[AS Budget Tracker](https://budget-tracker-application-production.up.railway.app/dashboard.html)
 
 A comprehensive budget tracking web application built with Node.js, Express, MySQL, and Bootstrap. Track your income, expenses, visualize your spending patterns, and manage your finances effectively.
 
