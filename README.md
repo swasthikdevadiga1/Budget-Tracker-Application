@@ -51,7 +51,7 @@ Before running this application, make sure you have the following installed:
 ### 1. Clone/Download the Project
 ```bash
 # If using git
-git clone <repository-url>
+git clone https://github.com/swasthikdevadiga1/Budget-Tracker-Application
 cd budget-tracker
 
 # Or download and extract the zip file
