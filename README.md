@@ -94,7 +94,7 @@ const db = mysql.createConnection({
 **Default configuration:**
 - Host: localhost
 - User: root
-- Password: 6362 (change this to your MySQL password)
+- Password: pswd (change this to your MySQL password)
 - Database: budget_tracker
 
 ### 5. File Structure
