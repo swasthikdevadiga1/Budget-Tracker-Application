@@ -16,11 +16,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 const connection = mysql.createConnection({
-  host: process.env.MYSQL_HOST || process.env.DATABASE_HOST,
-  port: process.env.MYSQL_PORT || process.env.DATABASE_PORT || 3306,
-  user: process.env.MYSQL_USER || process.env.DATABASE_USER,
-  password: process.env.MYSQL_PASSWORD || process.env.DATABASE_PASSWORD,
-  database: process.env.MYSQL_DATABASE || process.env.DATABASE_NAME
+  host: process.env.MYSQL_HOST,
+  port: process.env.MYSQL_PORT,
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
+  database: process.env.MYSQL_DATABASE
 });
 connection.connect((err) => {
   if (err) {
